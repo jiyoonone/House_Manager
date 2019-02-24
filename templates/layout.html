@@ -31,8 +31,9 @@
             <div class="sidebar-collapse">
                 <ul class="nav" id="side-menu">
                     <li class="nav-header">
-                        <div class="dropdown profile-element"> <span>
-                            <img alt="image" class="img-rectangle" src="{{ url_for('static', filename='img/donga.png') }}" />
+                        <div class="dropdown profile-element">
+                            <span>
+                            <a href="{{ url_for('home') }}"><img alt="image" class="img-rectangle" src="{{ url_for('static', filename='img/donga.png') }}" /></a>
                              </span>
                             <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                             <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">동아오피스텔</strong>
@@ -82,12 +83,13 @@
                     </div>
                     <ul class="nav navbar-top-links navbar-right">
                         <li>
-                            <span class="m-r-sm text-muted welcome-message">동아오피스텔</span>
+                            <span class="m-r-sm text-muted welcome-message"><a href="{{ url_for('home') }}">동아오피스텔</a></span>
                         </li>
                         <li>
-                            <a href="login.html">
-                                <i class="fa fa-sign-out"></i> 로그인
-                            </a>
+                            <a href="{{ url_for('login') }}">로그인</a>
+                        </li>
+                        <li>
+                            <a href="{{ url_for('register') }}">관리자등록</a>
                         </li>
                     </ul>
                 </nav>
